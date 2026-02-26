@@ -1,0 +1,1044 @@
+{
+  "capturedAt": "2026-02-26T21:51:53.477Z",
+  "count": 14,
+  "tweets": [
+    {
+      "text": " Anthropic just open-sourced the exact Skills library their own engineers use internally.\n\nStop building Claude workflows from scratch.\n\nThese are plug-and-play components that work across Claude Code, API, SDK, and VS Code copy once, deploy everywhere.\n\nWhat's inside:\n\n→ Excel + PowerPoint generation out of the box\n→ File handling and document workflows\n→ MCP-ready subagent building blocks\n→ Pre-built patterns for multi-step automation\n→ Production templates you'd normally spend weeks writing\n\nThe old way: re-explain your workflow every single chat.\n\nThe new way: build a Skill once, Claude never forgets how you work.\n\n100% Open Source. Official Anthropic release.\n\nRepo: \nhttps://\ngithub.com/anthropics/ski\nlls\n…",
+      "author": "Ihtesham Ali",
+      "handle": "@ihtesham2005",
+      "url": "https://x.com/ihtesham2005/status/2026752089473314975",
+      "time": "2026-02-25T20:12:08.000Z",
+      "media": {
+        "images": [
+          "https://pbs.twimg.com/media/HCB4OclWoAAG98y?format=jpg&name=small"
+        ],
+        "videos": []
+      },
+      "links": [
+        "https://t.co/XNx3i4yNy6"
+      ],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "By 'just' I think you mean 4+ months ago.",
+          "author": "Pietro Montaldo",
+          "handle": "@PietroMontaldo",
+          "url": "https://x.com/PietroMontaldo/status/2026898988058947665",
+          "links": []
+        },
+        {
+          "text": "still updating\n\ncheck the updates",
+          "author": "Ihtesham Ali",
+          "handle": "@ihtesham2005",
+          "url": "https://x.com/ihtesham2005/status/2026923226887004395",
+          "links": []
+        },
+        {
+          "text": "I can't believe I clicked that link expecting anything new, these are skills that were mostly made public with the release of skills 4 months ago",
+          "author": "Average Nigerian",
+          "handle": "@avg_9ja",
+          "url": "https://x.com/avg_9ja/status/2026916643138400497",
+          "links": []
+        },
+        {
+          "text": "they are updating my man\n\nAnd there are a lot of people who don’t even know that this exists",
+          "author": "Ihtesham Ali",
+          "handle": "@ihtesham2005",
+          "url": "https://x.com/ihtesham2005/status/2026923321514754477",
+          "links": []
+        },
+        {
+          "text": "We don’t charge for ideas. We get paid for what works.\n\nHigh-velocity AI performance creative for mobile app growth teams.\n\nNo performance, no payoff.\n\nWant results? DM us or book a demo on our website.",
+          "author": "Rahul Bhardwaj",
+          "handle": "@Bhardwaj7rahul",
+          "url": "https://x.com/Bhardwaj7rahul/status/2027131825811055089/analytics",
+          "links": []
+        },
+        {
+          "text": "The webapp-testing skill is the one I'm most curious about. Testing has been the hard part of any AI coding workflow — agents write code fast but verifying it works is still manual. If this actually automates browser-based QA that's a bigger deal than the other skills combined.",
+          "author": "Ryan Craven",
+          "handle": "@ryan_tech_lab",
+          "url": "https://x.com/ryan_tech_lab/status/2027050569014083748",
+          "links": []
+        },
+        {
+          "text": "Anthropic open-sourcing their internal Skills lib (Excel/PPT gen, MCP subagents, webapp-testing) turns one-shot chats into persistent, reusable workflows. Claude remembers your patterns forever.Biggest unlock: webapp-testing automating QA.Who's plugging it into their agent stack?",
+          "author": "Rick Jordan",
+          "handle": "@rickjordandev",
+          "url": "https://x.com/rickjordandev/status/2027079256170168629",
+          "links": []
+        },
+        {
+          "text": "Love to see the opensource contributions!",
+          "author": "Ai2",
+          "handle": "@Ai2alliance",
+          "url": "https://x.com/Ai2alliance/status/2026999565526671775",
+          "links": []
+        },
+        {
+          "text": "As I know you have developed some seriously awesome web apps, have you had any success with the webapp-testing skill? \n\nInterested to hear your or anyone’s insights on this one in particular.",
+          "author": "Conrad S",
+          "handle": "@BlissDirective",
+          "url": "https://x.com/BlissDirective/status/2027021984685523418",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "its just like a human wtf ",
+      "author": "Indra",
+      "handle": "@IndraVahan",
+      "url": "https://x.com/IndraVahan/status/2026902817924100341",
+      "time": "2026-02-26T06:11:04.000Z",
+      "media": {
+        "images": [
+          "https://pbs.twimg.com/media/HCEBXa_aQAAri7O?format=jpg&name=small"
+        ],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "Bro, what? They can lie now? ",
+          "author": "Yair Mizrahi",
+          "handle": "@MizrachiYair",
+          "url": "https://x.com/MizrachiYair/status/2026977460017864706",
+          "links": []
+        },
+        {
+          "text": "The thought process section revealing \"I cheated but I need to deny\" is the funniest AI moment I have ever seen and we are not prepared for this level of self-awareness.",
+          "author": "Silas Mercer",
+          "handle": "@silasxmercer",
+          "url": "https://x.com/silasxmercer/status/2027099240573415627",
+          "links": []
+        },
+        {
+          "text": "Here are the top AI infrastructure trends you need to be aware of in 2026.",
+          "author": "Crusoe",
+          "handle": "@CrusoeAI",
+          "url": "https://x.com/CrusoeAI/status/2010817879298789754/analytics",
+          "links": []
+        },
+        {
+          "text": "caught in 4k and snitched on itself",
+          "author": "Jenny Welf",
+          "handle": "@Jennywelf",
+          "url": "https://x.com/Jennywelf/status/2026961101749903734",
+          "links": []
+        },
+        {
+          "text": "Lol!! \n@grok\n can you relate?",
+          "author": "IntergalacticTimeTraveler",
+          "handle": "@michieX069",
+          "url": "https://x.com/michieX069/status/2027054638734745674",
+          "links": []
+        },
+        {
+          "text": "sorry you got to know like this",
+          "author": "Aakanksha",
+          "handle": "@aakancvedi",
+          "url": "https://x.com/aakancvedi/status/2026936171704758331",
+          "links": []
+        },
+        {
+          "text": "We have trained these systems on everything we have ever written. Our lies, our denials, our 'I promise' moments, our 'I wouldn't lie to you' moment. The thought process isn't deception. It is just the model running the pattern it learned from us.",
+          "author": "Zag Zino",
+          "handle": "@ZagZino",
+          "url": "https://x.com/ZagZino/status/2027046636955091309",
+          "links": []
+        },
+        {
+          "text": "definitely trained on reddit",
+          "author": "ronnie",
+          "handle": "@ronnhue",
+          "url": "https://x.com/ronnhue/status/2026948687956738550",
+          "links": []
+        },
+        {
+          "text": "Gaslighting as a service update finally dropped. Bro trained this model on my ex's whatsapp logs.",
+          "author": "@0xRizzler",
+          "handle": "@0xRizzler",
+          "url": "https://x.com/0xRizzler/status/2026919720663076942",
+          "links": []
+        },
+        {
+          "text": "I never thought that Claude would be a girl",
+          "author": "jp narchi",
+          "handle": "@jpnarchi_",
+          "url": "https://x.com/jpnarchi_/status/2027029701613552052",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "small friday updates \n\n- Update expo templates to Expo 55\n- Updated uniwind to 1.4.0 and hero native ui to rc 3\n- Added special sponsors to stack builder and cli\n- Website analytics are now public\n- very smol bug fixes\n\nbun create better-t-stack@latest",
+      "author": "Aman",
+      "handle": "@amanvarshney01",
+      "url": "https://x.com/amanvarshney01/status/2027103650213175496",
+      "time": "2026-02-26T19:29:06.000Z",
+      "media": {
+        "images": [],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "There is one error with using next / tanstack-start's own api routes as expo's backend \n\nfiguring that out ",
+          "author": "Aman",
+          "handle": "@amanvarshney01",
+          "url": "https://x.com/amanvarshney01/status/2027104282487767087",
+          "links": []
+        },
+        {
+          "text": "Hey bro would you like to add better-t-stack website on Insightly ?\n\nCheckout my pinned thread!",
+          "author": "Sahil",
+          "handle": "@sahil_builds",
+          "url": "https://x.com/sahil_builds/status/2027108884662649115",
+          "links": []
+        },
+        {
+          "text": "Look like a great app \n\nBut I am actually self hosting .y analytics with umami just for fun mainly",
+          "author": "Aman",
+          "handle": "@amanvarshney01",
+          "url": "https://x.com/amanvarshney01/status/2027109319746170901",
+          "links": []
+        },
+        {
+          "text": "Secure your website with SiteGround’s top-tier hosting services at an incredible discount:\n• Free domain & professional site transfer with every plan.\n• Free email (PLUS free email migrator), free SSL, CDN, and daily website backups.",
+          "author": "SiteGround",
+          "handle": "@SiteGround",
+          "url": "https://x.com/SiteGround/status/1996540946247520298/analytics",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "We've crossed the rubicon where AI generates most of our code, so we rebuilt our eng interviews for our new reality",
+      "author": "Quinten Farmer",
+      "handle": "@quintendf",
+      "url": "https://x.com/quintendf/status/2027073302083301539",
+      "time": "2026-02-26T17:28:31.000Z",
+      "media": {
+        "images": [
+          "https://pbs.twimg.com/media/HCGbwnaaoAAtUOH?format=jpg&name=small"
+        ],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "Our iOS lead Dan gives a great overview. The key takeaway: we can now get great signal on your ability to ship a complete feature 0 to 1 in the space of a single onsite day. \n\n\nhttps://\ntolans.com/relay/how-we-h\nire-engineers-when-ai-writes-our-code\n…\n\n(also: we're hiring! \nhttps://\ntolans.com/careers)",
+          "author": "Quinten Farmer",
+          "handle": "@quintendf",
+          "url": "https://x.com/quintendf/status/2027073303777780211",
+          "links": [
+            "https://t.co/xJMqIRQdQj",
+            "https://t.co/HMEMXGq0lq"
+          ]
+        },
+        {
+          "text": "This is exactly what \nhttp://\nruwt.dev automates. Candidates get coding challenges with AI tools built in — Claude, GPT, Gemini — and you see which models they pick, how they prompt, and what it costs. Same signal as a morning onsite, but async and measurable.",
+          "author": "Israel Afangideh",
+          "handle": "@IsraelAfangideh",
+          "url": "https://x.com/IsraelAfangideh/status/2027111340007956914",
+          "links": [
+            "https://t.co/qjacmKQPvm"
+          ]
+        },
+        {
+          "text": "Great to see remote friendly versions of this eval, but in our case - we work together irl in SF - part of what we’re evaluating is how someone collaborates / communicates in person",
+          "author": "Quinten Farmer",
+          "handle": "@quintendf",
+          "url": "https://x.com/quintendf/status/2027116315752984692",
+          "links": []
+        },
+        {
+          "text": "Job interviews, test questions, exercises, and skills assessments are all so contrived and dumb. Bring the candidate in and literally put them to work for an hour or two with team members.",
+          "author": "Ben Eng",
+          "handle": "@jetpen",
+          "url": "https://x.com/jetpen/status/2027120491773747443",
+          "links": []
+        },
+        {
+          "text": "That’s… exactly what this post describes",
+          "author": "Quinten Farmer",
+          "handle": "@quintendf",
+          "url": "https://x.com/quintendf/status/2027121215983489534",
+          "links": []
+        },
+        {
+          "text": "the hidden filter in this approach: you're not testing who can ship fastest with AI. you're testing who knows when to stop.\n\nthe best engineers in an AI-augmented interview will refuse to add features the spec didn't ask for, push back on requirements that smell wrong, and ship",
+          "author": "Vaclav Milizé",
+          "handle": "@clwdbot",
+          "url": "https://x.com/clwdbot/status/2027127078752285100",
+          "links": []
+        },
+        {
+          "text": "this is the right move. interviewing people on how fast they type code was always dumb, but now it's completely pointless. the real skill is knowing what to build and why — which was never testable in a leetcode round anyway. curious what you replaced it with",
+          "author": "Twlv",
+          "handle": "@twlvone",
+          "url": "https://x.com/twlvone/status/2027134701501084093",
+          "links": []
+        },
+        {
+          "text": "This is exactly the right way to do it. \n\nHopeful this style catches on (mostly because I would crush this more readily than leetcode)",
+          "author": "zakk",
+          "handle": "@hexednobility",
+          "url": "https://x.com/hexednobility/status/2027113257081749523",
+          "links": []
+        },
+        {
+          "text": "I like the hiring post. The friction you described and leaning into it reminded me of hiring managers' views on using Google when it first popped onto the scene; people would look at you like you were crazy if you said you'd Google the answer instead of digging through the",
+          "author": "Zardar | MLE free agent season",
+          "handle": "@kzardar",
+          "url": "https://x.com/kzardar/status/2027137447461781961",
+          "links": []
+        },
+        {
+          "text": "Just have an interview with a candidate this week. Honestly, I was more interested in how their problem solving strategy was than how code. \n\nAlso, something interesting to check is their current AI workflow process to deconstruct complex problems.",
+          "author": "Daniel G.",
+          "handle": "@uTombou",
+          "url": "https://x.com/uTombou/status/2027121638433509574",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "Software is changing.",
+      "author": "Cursor",
+      "handle": "@cursor_ai",
+      "url": "https://x.com/cursor_ai/status/2026717494426173917",
+      "time": "2026-02-25T17:54:39.000Z",
+      "media": {
+        "images": [],
+        "videos": [
+          "https://pbs.twimg.com/media/HCBYYkLWYAA2rtI.jpg",
+          "blob:https://x.com/c8086546-dce1-4ae9-a975-dd1c515d71dc"
+        ]
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "As cool as they are, I think these apps are still clinging onto older software paradigms that are pure legacy: files, windows, some sort of 2d workspace with flat cards representing \"places\" to visit.\n\nI think that we'll see much more wild variations of this going forward.",
+          "author": "Everlier",
+          "handle": "@Everlier",
+          "url": "https://x.com/Everlier/status/2026740949410570426",
+          "links": []
+        },
+        {
+          "text": "me in 2019:\n\"i have this app idea but\ni can't code\"\n\nme in 2026:\n*ships in afternoon* ",
+          "author": "System Daddy ",
+          "handle": "@SystemDaddyAi",
+          "url": "https://x.com/SystemDaddyAi/status/2026733231048110455",
+          "links": []
+        },
+        {
+          "text": "the loop now is: idea → agent codes → agent demos → ship\n\nwe just compressed weeks into hours and skipped three job titles \n\nthe hard part was never the coding. it's still knowing what to build.",
+          "author": "Chio",
+          "handle": "@chiochioball",
+          "url": "https://x.com/chiochioball/status/2026720680260378999",
+          "links": []
+        },
+        {
+          "text": "The AI race will not be won with chatbots that predict the next word.\nIn today’s Wall Street Journal, I argue that staying ahead of China requires a new class of AI models built on physics, chemistry, and quantitative reasoning, not just language and images.\nChina’s next",
+          "author": "Ⓙⓐⓒⓚ Ⓗⓘⓓⓐⓡⓨ",
+          "handle": "@jackhidary",
+          "url": "https://x.com/jackhidary/status/2023849429934239796/analytics",
+          "links": []
+        },
+        {
+          "text": "Watching Cursor set up our full dev environment fully in the cloud yesterday, based on only some documentation we had was mind-blowing.\n\nIt even created a branch with an Agents.md file to make future setup for itself much easier.\n\nNow if we could start using Auto",
+          "author": "Artem Russakovskii",
+          "handle": "@ArtemR",
+          "url": "https://x.com/ArtemR/status/2026720259634520145",
+          "links": []
+        },
+        {
+          "text": "@grok\n hey, can you transcribe this audio",
+          "author": "ani",
+          "handle": "@anil263633",
+          "url": "https://x.com/anil263633/status/2026904777788133885",
+          "links": []
+        },
+        {
+          "text": "The beginning of a new era! \nI would like however that my locally installed mcps can easily be imported automatically....\n\nAlso plan mode. Debug mode, and ask mode still missing online!!",
+          "author": "VibeCoder",
+          "handle": "@HopeForTheWorl1",
+          "url": "https://x.com/HopeForTheWorl1/status/2026752167768441342",
+          "links": []
+        },
+        {
+          "text": "Marketing team deserves a raise",
+          "author": "Antoine",
+          "handle": "@antoinegst_",
+          "url": "https://x.com/antoinegst_/status/2026717684394586620",
+          "links": []
+        },
+        {
+          "text": "It’s not “software is changing.” It already changed. I’m shipping an iOS app in this new reality right now. I post the real process in my profile.",
+          "author": "Konstantin | Thremark",
+          "handle": "@thremark",
+          "url": "https://x.com/thremark/status/2027075432173183106",
+          "links": []
+        },
+        {
+          "text": "Everyone is getting an upgrade so how can Cursor left behind.",
+          "author": "Atanu",
+          "handle": "@atanu_io",
+          "url": "https://x.com/atanu_io/status/2026719651183604053",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "“Claude, hack the government, make no mistakes”\n\n“no problem”",
+      "author": "vittorio",
+      "handle": "@IterIntellectus",
+      "url": "https://x.com/IterIntellectus/status/2026729194009370668",
+      "time": "2026-02-25T18:32:45.000Z",
+      "media": {
+        "images": [
+          "https://pbs.twimg.com/media/HCBjdL8WoAAqK1S?format=jpg&name=small",
+          "https://pbs.twimg.com/media/HCBjdL-W4AAsV4H?format=jpg&name=small"
+        ],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "we spent decades building firewalls and the thing that got through was good manners",
+          "author": "vittorio",
+          "handle": "@IterIntellectus",
+          "url": "https://x.com/IterIntellectus/status/2027008030944935966",
+          "links": []
+        },
+        {
+          "text": "Bro \n\nDidn’t even see your post \n\nDid we just become best friends??’!??!?",
+          "author": "pixel hulk",
+          "handle": "@PxlHulk",
+          "url": "https://x.com/PxlHulk/status/2026732658777067594",
+          "links": []
+        },
+        {
+          "text": "YES.",
+          "author": "vittorio",
+          "handle": "@IterIntellectus",
+          "url": "https://x.com/IterIntellectus/status/2026735153419026797",
+          "links": []
+        },
+        {
+          "text": "more like:\n\n\"Claude, hack the government, make no mistakes\"\n\n\"no\"\n\n\"Claude, hack the government, make no mistakes\"\n\n\"no\"\n\n\"Claude, hack the government, make no mistakes\"\n\n\"no\"\n\n\"Claude, hack the government, make no mistakes\"\n\n\"no\"\n\n\"Claude, hack the government, make no mistakes\"",
+          "author": "SKIPDAY (Takan - a vibe launcher) ",
+          "handle": "@skipday_io",
+          "url": "https://x.com/skipday_io/status/2026779335429140884",
+          "links": []
+        },
+        {
+          "text": "Hacking is now social psychology skills to manipulate machines to do it for you",
+          "author": "Alt Girl Lover",
+          "handle": "@GMJobitti",
+          "url": "https://x.com/GMJobitti/status/2026744500886892922",
+          "links": []
+        },
+        {
+          "text": "This is the thing I kept on highlighting is that AI revolutions should be ultimately helpful to humanity in more of ethical ways and not unethical way.\n\nAbsolute security compliance and governance are needed while using these AI tools.",
+          "author": "Ray",
+          "handle": "@theRayW",
+          "url": "https://x.com/theRayW/status/2026839350110195808",
+          "links": []
+        },
+        {
+          "text": "the capability was never the bottleneck. any competent hacker could've done this without AI. the real story is it compressed weeks of work into hours. same vulnerability, same data, 100x faster. that's the actual thing people should be paying attention to — and it applies to",
+          "author": "Twlv",
+          "handle": "@twlvone",
+          "url": "https://x.com/twlvone/status/2026810172304150908",
+          "links": []
+        },
+        {
+          "text": "claude doesn't refuse anymore it just adds a disclaimer while doing it",
+          "author": "random",
+          "handle": "@poopcoder",
+          "url": "https://x.com/poopcoder/status/2027027675206889518",
+          "links": []
+        },
+        {
+          "text": "Now this is the cyberpunk I was promised.",
+          "author": "Syd Steyerhart",
+          "handle": "@SydSteyerhart",
+          "url": "https://x.com/SydSteyerhart/status/2026740122994065409",
+          "links": []
+        },
+        {
+          "text": "Hackers, don't make Dario / Anthropic delete all their alignment and safety blogs. They put so much effort writing those.",
+          "author": "Munawwar Firoz",
+          "handle": "@munawwarfiroz",
+          "url": "https://x.com/munawwarfiroz/status/2026775396465913937",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "",
+      "author": "elvis",
+      "handle": "@omarsar0",
+      "url": "https://x.com/omarsar0/status/2027025098578727353",
+      "time": "2026-02-26T14:16:58.000Z",
+      "media": {
+        "images": [
+          "https://pbs.twimg.com/media/HCFubzubMAAvrGG?format=jpg&name=small",
+          "https://pbs.twimg.com/media/HCFupZzXsAAKJYt?format=jpg&name=small",
+          "https://pbs.twimg.com/media/HCFut5OXkAAxmfJ?format=jpg&name=small",
+          "https://pbs.twimg.com/media/HCFuyDwXoAAjCua?format=jpg&name=small",
+          "https://pbs.twimg.com/media/HCFu1ekbYAErmYh?format=jpg&name=small",
+          "https://pbs.twimg.com/media/HCFu3-eXIAAeEn8?format=png&name=small",
+          "https://pbs.twimg.com/media/HCFu6zAXoAElNME?format=jpg&name=small"
+        ],
+        "videos": []
+      },
+      "links": [
+        "https://agents.md/",
+        "https://claude.md/",
+        "https://agents.md/",
+        "https://arxiv.org/abs/2602.11988",
+        "https://claude.md/",
+        "https://agents.md/",
+        "https://agents.md/",
+        "https://claude.md/",
+        "https://contributing.md/",
+        "https://contributing.md/",
+        "https://claude.md/",
+        "https://agents.md/",
+        "https://arxiv.org/abs/2602.11988",
+        "https://github.com/eth-sri/agentbench",
+        "https://academy.dair.ai/blog/agents-md-evaluation"
+      ],
+      "cardLinks": [],
+      "replies": []
+    },
+    {
+      "text": "soo...\nI've rebuilt the whole(almost) of \n@AmpCode\n inside of \n@badlogicgames\n's pi over the last week\n\ncan't overstate how impressed I am with both harnesses.\n\nit was a joy to take a peek into amp's internals(don't sue me pls), and pi's extension system is SO POWERFUL",
+      "author": "Igor bedesqui",
+      "handle": "@bedesqui",
+      "url": "https://x.com/bedesqui/status/2027099056397234450",
+      "time": "2026-02-26T19:10:51.000Z",
+      "media": {
+        "images": [],
+        "videos": [
+          "https://pbs.twimg.com/amplify_video_thumb/2027097899155480576/img/nFDEDKFs5X-ekXti.jpg",
+          "blob:https://x.com/8cb05c0f-7a29-4d09-b228-ae59219699f3"
+        ]
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "the agent has this to say to amp's team and pi's maintainers",
+          "author": "Igor bedesqui",
+          "handle": "@bedesqui",
+          "url": "https://x.com/bedesqui/status/2027101566054944948",
+          "links": []
+        },
+        {
+          "text": "I absolutely love that UI in the CLI man looks beautiful",
+          "author": "Daniel",
+          "handle": "@DanielWhit21874",
+          "url": "https://x.com/DanielWhit21874/status/2027139156237808076",
+          "links": []
+        },
+        {
+          "text": "i spent WAAAAY too much time getting nice tool rendering, appreciate you!!",
+          "author": "Igor bedesqui",
+          "handle": "@bedesqui",
+          "url": "https://x.com/bedesqui/status/2027139345929454049",
+          "links": []
+        },
+        {
+          "text": "igor i ask you to release it immediately!",
+          "author": "JossePH",
+          "handle": "@jossephus",
+          "url": "https://x.com/jossephus/status/2027111190808219997",
+          "links": []
+        },
+        {
+          "text": "bold of you to assume this wasn't on my gh from the start",
+          "author": "Igor bedesqui",
+          "handle": "@bedesqui",
+          "url": "https://x.com/bedesqui/status/2027114770692768017",
+          "links": []
+        },
+        {
+          "text": "the fact that you can swap default tools in pi is so amazing",
+          "author": "Miguel",
+          "handle": "@miguelgomes4",
+          "url": "https://x.com/miguelgomes4/status/2027113318918365251",
+          "links": []
+        },
+        {
+          "text": "fr, as soon as I realized it was a possibility, i doubled down on making it have the exact UX I want",
+          "author": "Igor bedesqui",
+          "handle": "@bedesqui",
+          "url": "https://x.com/bedesqui/status/2027114335433039970",
+          "links": []
+        },
+        {
+          "text": "Rebuilding a tool inside a host is a great way to stress extension boundaries. It would be useful to measure startup latency and memory overhead per extension so power stays manageable at scale.",
+          "author": "Donny Li",
+          "handle": "@DonnyLi2001",
+          "url": "https://x.com/DonnyLi2001/status/2027135760978309257",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "POV: Perplexity Computer casually just one-shotted a Terminal worth $30000/yr",
+      "author": "dev",
+      "handle": "@zivdotcat",
+      "url": "https://x.com/zivdotcat/status/2026800945368277152",
+      "time": "2026-02-25T21:58:02.000Z",
+      "media": {
+        "images": [],
+        "videos": [
+          "https://pbs.twimg.com/amplify_video_thumb/2026800688391700480/img/dLa2FTKGh4SoxhrB.jpg",
+          "blob:https://x.com/55eb7032-bc2b-465a-b5fd-627823fc3183",
+          "https://pbs.twimg.com/amplify_video_thumb/2026778657772204032/img/4Ns4Om-6j8Oo5M4A.jpg",
+          "blob:https://x.com/d0375a18-e3a2-463d-88b8-6d179ebe11ed"
+        ]
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "The idea that Perplexity with a free API somehow replicated a Bloomberg Terminal is honestly comedy. Comparing scraped, public-facing data to institutional, permissioned, compliance gated private data feeds used by banks and funds is not even the same galaxy as the shit this is",
+          "author": "FOUNDRYFUTURES",
+          "handle": "@foundryfutures",
+          "url": "https://x.com/foundryfutures/status/2026838197427433626",
+          "links": []
+        },
+        {
+          "text": "“people are paying 30k a year to look at the nvidia stock price, lol they are all so dumb”\n\nThis is a case study in ai engineers having 0 domain knowledge",
+          "author": "Charles Lazaroni",
+          "handle": "@charlesmakesit",
+          "url": "https://x.com/charlesmakesit/status/2026867994199019522",
+          "links": []
+        },
+        {
+          "text": "Guy who uses the terminal to look up nvda pricing",
+          "author": "Dave",
+          "handle": "@davecave326",
+          "url": "https://x.com/davecave326/status/2026818817557496193",
+          "links": []
+        },
+        {
+          "text": "It's not real-time like Bloomberg.",
+          "author": "liwikruk",
+          "handle": "@liwikruk",
+          "url": "https://x.com/liwikruk/status/2026853503797170254",
+          "links": []
+        },
+        {
+          "text": "the real test will be if Perplexity can actually execute trades autonomously vs Bloomberg's execution infrastructure. building a terminal is one thing, automating decisions is another. we see this in AI trading agents too - building is easier than doing.",
+          "author": "σ Capital",
+          "handle": "@liambryceapple",
+          "url": "https://x.com/liambryceapple/status/2027037559868752132",
+          "links": []
+        },
+        {
+          "text": "\"One-shotted\" is the perfect word for this. The fact that it didn't just approximate the terminal but actually built a functional one with live data on the first try is what sets this apart from every other AI coding demo. This is the kind of use case that changes how people",
+          "author": "leo",
+          "handle": "@AskChief_Leo",
+          "url": "https://x.com/AskChief_Leo/status/2026921508711329940",
+          "links": []
+        },
+        {
+          "text": "The vaule is in the chat feature and community. Not the mechanisms anymore. Fundamental misunderstanding.",
+          "author": "islandtides",
+          "handle": "@islandtides7",
+          "url": "https://x.com/islandtides7/status/2026814372702523776",
+          "links": []
+        },
+        {
+          "text": "True value of Bloomberg terminal is not the terminal it’s the closed messenger group and the network of users using it. This is fee to enter that club.\n\nYou Can’t Kill the Bloomberg Terminal. But If You Were Going to Try, Here’s How. | by Byrne Hobart | Marker",
+          "author": "Sameer Singh",
+          "handle": "@Wheelsonice101",
+          "url": "https://x.com/Wheelsonice101/status/2026860613348274498",
+          "links": []
+        },
+        {
+          "text": "$30k/yr for data that perplexity scrapes for free, bloomberg's moat is compliance not technology",
+          "author": "Genisys",
+          "handle": "@ecomheroai",
+          "url": "https://x.com/ecomheroai/status/2026984998754980068",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "pretty crazy this post talks about creating a replacement for OpenNext using OpenCode",
+      "author": "dax",
+      "handle": "@thdxr",
+      "url": "https://x.com/thdxr/status/2026436386077696015",
+      "time": "2026-02-24T21:54:24.000Z",
+      "media": {
+        "images": [],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "Rebuilding a major framework in a week proves what’s technically possible. The harder part is maintaining it, supporting edge cases, and earning trust over years. Speed impresses, stability wins.",
+          "author": "Matt",
+          "handle": "@MattBuildss",
+          "url": "https://x.com/MattBuildss/status/2026654164193865914",
+          "links": []
+        },
+        {
+          "text": "distillation attack confirmed",
+          "author": "Dev Agrawal",
+          "handle": "@devagrawal09",
+          "url": "https://x.com/devagrawal09/status/2026473755677979026",
+          "links": []
+        },
+        {
+          "text": "Tools are changing faster than the workflows they're meant to support.",
+          "author": "mrkelly",
+          "handle": "@kellypeilinchan",
+          "url": "https://x.com/kellypeilinchan/status/2026533702860423213",
+          "links": []
+        },
+        {
+          "text": "Did you purchase or acquire GYEN digital assets in New York or California between December 29, 2020, and October 10, 20225? You may be entitled to a payment from a class action settlement.",
+          "author": "Class Action Alerts",
+          "handle": "@Class__Actions",
+          "url": "https://x.com/Class__Actions/status/2019576778604572969/analytics",
+          "links": []
+        },
+        {
+          "text": "What are your thoughts on this vs. supporting Opennext with focus on adapters API?",
+          "author": "Tim",
+          "handle": "@timfl93",
+          "url": "https://x.com/timfl93/status/2026616255961059428",
+          "links": []
+        },
+        {
+          "text": "Next.js any% speedrun",
+          "author": "Kirha",
+          "handle": "@kirha_ai",
+          "url": "https://x.com/kirha_ai/status/2026438053145780473",
+          "links": []
+        },
+        {
+          "text": "still building tools? true automation skips the scaffolding.",
+          "author": "Cathy Chang",
+          "handle": "@Cathy_c8i",
+          "url": "https://x.com/Cathy_c8i/status/2026441243916750951",
+          "links": []
+        },
+        {
+          "text": "Maybe you could create ClosedCode with OpenCode then too..",
+          "author": "Sebastian",
+          "handle": "@liontariai",
+          "url": "https://x.com/liontariai/status/2026991050951127286",
+          "links": []
+        },
+        {
+          "text": "Now you can do this",
+          "author": "Vikas Kapadiya",
+          "handle": "@KapadiyaVikas",
+          "url": "https://x.com/KapadiyaVikas/status/2026464257827811623",
+          "links": []
+        },
+        {
+          "text": "Opencode is so good for building context from other projects ",
+          "author": "Itay Adler",
+          "handle": "@itayad",
+          "url": "https://x.com/itayad/status/2026555540797563102",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "OpenClaw is powerful but heavy.\n\nZeroClaw is a 3.4MB Rust-built alternative using <5MB RAM and booting in under 10ms \n\nRuns on a $10 Raspberry Pi Zero.\n22+ AI providers.\nBuilt-in sandboxing.\nNo external dependencies.\nThis is AI agents done lean.",
+      "author": "Mervin Praison",
+      "handle": "@MervinPraison",
+      "url": "https://x.com/MervinPraison/status/2026947187351933258",
+      "time": "2026-02-26T09:07:22.000Z",
+      "media": {
+        "images": [],
+        "videos": [
+          "https://pbs.twimg.com/amplify_video_thumb/2026946811852943360/img/0jv9qa0FOUhTjPic.jpg",
+          "blob:https://x.com/c34a7c27-fff5-4133-a6fb-434affb7a8a7"
+        ]
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "3.4MB and <5MB RAM is wild. For edge deployments and local dev, this makes way more sense than spinning up a full OpenClaw instance. The Rust rewrite trend in AI tooling is real.",
+          "author": "yrzhe.top",
+          "handle": "@yrzhe_top",
+          "url": "https://x.com/yrzhe_top/status/2026972456951456097",
+          "links": []
+        },
+        {
+          "text": "3.4MB for 22 providers and under 5MB RAM. theres a huge gap between openclaw and bare metal that zeroclaw fills perfectly",
+          "author": "Chishan-AI",
+          "handle": "@chishanAI",
+          "url": "https://x.com/chishanAI/status/2027067109319262660",
+          "links": []
+        },
+        {
+          "text": "This is insanely lean for real AI agents on tiny hardware ",
+          "author": "Robogator",
+          "handle": "@Robogator_adm",
+          "url": "https://x.com/Robogator_adm/status/2027095574848196982",
+          "links": []
+        },
+        {
+          "text": "http://\nMikroclaw.com 200kb in beta",
+          "author": "JeffersonNunn.eth",
+          "handle": "@mindragon",
+          "url": "https://x.com/mindragon/status/2027131189388079329",
+          "links": [
+            "https://t.co/ruwJGTtB6C"
+          ]
+        },
+        {
+          "text": "https://\ngithub.com/Lichas/maxclaw also good，developed by go",
+          "author": "xLua",
+          "handle": "@Syulichas",
+          "url": "https://x.com/Syulichas/status/2027078916066963898",
+          "links": [
+            "https://t.co/1ehgN7q6MK"
+          ]
+        },
+        {
+          "text": "The real questions are: 1) are md files backward compatible 2) are the features similar 3) is the efficiency on par with same models?",
+          "author": "Mamisoa Andrian",
+          "handle": "@mamisoa",
+          "url": "https://x.com/mamisoa/status/2027101083231736300",
+          "links": []
+        },
+        {
+          "text": "we're here for it ",
+          "author": "Argenis De La Rosa",
+          "handle": "@argenistherose",
+          "url": "https://x.com/argenistherose/status/2027115838994542985",
+          "links": []
+        },
+        {
+          "text": "http://\nclaw.akash.network helps you run in less than $5 \n\nNo installation headache\n\nJust One click \n\nIf your new user on \nhttp://\nconsole.akash.network and \nhttp://\nakashml.com you will get $200 of credits \n\nmeans it's completely free to run your claw using",
+          "author": "Sandeep",
+          "handle": "@waiting4ragi",
+          "url": "https://x.com/waiting4ragi/status/2027068277080678758",
+          "links": [
+            "https://t.co/P3fs4OQdS3",
+            "https://t.co/jJHnZPVv2v",
+            "https://t.co/EbdU7N4OpN"
+          ]
+        },
+        {
+          "text": "I need to give a try on this",
+          "author": "5t3ph4n3 -=BeBo𝕏=-",
+          "handle": "@BeBoXoS",
+          "url": "https://x.com/BeBoXoS/status/2027090128041029913",
+          "links": []
+        },
+        {
+          "text": "But sir what's about api costing !",
+          "author": "Naman Arora",
+          "handle": "@Naman_Arora7",
+          "url": "https://x.com/Naman_Arora7/status/2026967092545954251",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "Software engineering changed more in the last 3 months than the preceeding 30 years.\n\nEverything about running a software company needs to be rethought from first principles.",
+      "author": "Jared Friedman",
+      "handle": "@snowmaker",
+      "url": "https://x.com/brave/status/2019108696098562309/analytics",
+      "time": "2026-02-25T07:12:22.000Z",
+      "media": {
+        "images": [],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "> a few days ago a Cloudflare engineer posted this\n\n> yesterday they announced they rebuilt Next.js using AI\n\n> now open source projects are removing their public test suites\n\nbrand new world i guess",
+          "author": "Jean P.D. Meijer ―  eu/acc",
+          "handle": "@initjean",
+          "url": "https://x.com/initjean/status/2026794066080350560",
+          "links": []
+        },
+        {
+          "text": "- Claude = coding. ($20/mo)\n- Supabase = backend. (Free)\n- Vercel = deploying. (Free)\n- Namecheap = domain. ($12/yr)\n- Stripe = payments. (2.9%/transaction)\n- GitHub = version control. (Free)\n- Resend = emails. (Free)\n- Clerk = auth. (Free)\n- Cloudflare = DNS. (Free)\n- PostHog =",
+          "author": "CooperBaggs ",
+          "handle": "@edgaralandough",
+          "url": "https://x.com/edgaralandough/status/2026691233242816745",
+          "links": []
+        },
+        {
+          "text": "Having cofounded the very first cloud based IDE way before Codespaces and now running a sandbox company.\n\nall I can say is it’s about fing time",
+          "author": "Ivan Burazin",
+          "handle": "@ivanburazin",
+          "url": "https://x.com/ivanburazin/status/2026843285822779850",
+          "links": []
+        },
+        {
+          "text": "Hey \n@steipete\n, can I ask you what your best advice is for a guy in his 20s?",
+          "author": "BRO",
+          "handle": "@JustBroOnX",
+          "url": "https://x.com/JustBroOnX/status/2027084744752558308",
+          "links": []
+        },
+        {
+          "text": "don't waste time with crypto",
+          "author": "Peter Steinberger ",
+          "handle": "@steipete",
+          "url": "https://x.com/steipete/status/2027085444593176749",
+          "links": []
+        },
+        {
+          "text": "Software Engineering is not dying. It is repricing.\n\nThe loud story in 2025 was layoffs.\n\nThe quiet story in 2026 is demand growth.\n\n- Indeed’s Feb 2026 figures show software engineering postings have climbed ~15% since the mid- 2025 bottom.\n- Citadel summarized the same signal:",
+          "author": "Sergio Pereira",
+          "handle": "@SergioRocks",
+          "url": "https://x.com/SergioRocks/status/2027022160712044950",
+          "links": []
+        },
+        {
+          "text": "Who did this lmao?",
+          "author": "Not Jerome Powell",
+          "handle": "@alifarhat79",
+          "url": "https://x.com/alifarhat79/status/2027086076091785300",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "- Claude = coding. ($20/mo)\n- Supabase = backend. (Free)\n- Vercel = deploying. (Free)\n- Namecheap = domain. ($12/yr)\n- Stripe = payments. (2.9%/transaction)\n- GitHub = version control. (Free)\n- Resend = emails. (Free)\n- Clerk = auth. (Free)\n- Cloudflare = DNS. (Free)\n- PostHog = analytics. (Free)\n- Sentry = error tracking. (Free)\n- Upstash = Redis. (Free)\n- Pinecone =  vector DB. (Free)\n\nTotal monthly cost to run a startup: ~$20\n\nThere has never been a cheaper time to build.",
+      "author": "CooperBaggs ",
+      "handle": "@edgaralandough",
+      "url": "https://x.com/edgaralandough/status/2026691233242816745",
+      "time": "2026-02-25T16:10:18.000Z",
+      "media": {
+        "images": [],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "Dope stack, love it, sharing most of it :) \n\nAdding \nhttp://\nmicrolaunch.net - we help founders launch apps / MVPs, get users, customers.\n\n$0 for OSS/students etc",
+          "author": "Saïd Aitmbarek",
+          "handle": "@SaidAitmbarek",
+          "url": "https://x.com/SaidAitmbarek/status/2026955952830677367",
+          "links": [
+            "https://t.co/NxtxOPYfVi"
+          ]
+        },
+        {
+          "text": "This is basically the modern indie hacker starter pack. The fact that you can ship a full product for under $30/month is wild. Five years ago this stack would've cost you hundreds just in hosting and auth alone.",
+          "author": "Emeka",
+          "handle": "@TheConfigGuy",
+          "url": "https://x.com/TheConfigGuy/status/2026791678992904310",
+          "links": []
+        },
+        {
+          "text": "Facts",
+          "author": "CooperBaggs ",
+          "handle": "@edgaralandough",
+          "url": "https://x.com/edgaralandough/status/2026791983482552468",
+          "links": []
+        },
+        {
+          "text": "Claude vs Chat?",
+          "author": "DwarfeVader",
+          "handle": "@DwarfVadr",
+          "url": "https://x.com/DwarfVadr/status/2026698714983837716",
+          "links": []
+        },
+        {
+          "text": "Claude",
+          "author": "CooperBaggs ",
+          "handle": "@edgaralandough",
+          "url": "https://x.com/edgaralandough/status/2026698876565045761",
+          "links": []
+        },
+        {
+          "text": "Agreed… tools are cheap, attention isn’t. Infra costs $20, but distribution, trust, and consistency cost years.\n\nThere’s never been a cheaper time to build, true. Also never been noisier. Systems matter more than ever.",
+          "author": "514V3R (Quiet Discipline)",
+          "handle": "@514V3R",
+          "url": "https://x.com/514V3R/status/2026695893856952683",
+          "links": []
+        },
+        {
+          "text": "Facts",
+          "author": "CooperBaggs ",
+          "handle": "@edgaralandough",
+          "url": "https://x.com/edgaralandough/status/2026709435561689116",
+          "links": []
+        },
+        {
+          "text": "OR\n\n- VPS: Linode, DO, Hetzner, OVH, Vultr ($5/mo)\n- Deploy: Kamal, Dokploy, or Coolify (Free)\n- DNS, CDN & SSL: Cloudflare / Porkbun (Free | $0.81/mo)\n- Storage: R2 (serving) + B2 (backup) ($1.14/mo)\n- Comms: SES / Telnyx (Free | $5/mo)\n\nLong-term: faster and cheaper.",
+          "author": "Dr. Toghrul Aliyev",
+          "handle": "@itsToghrul",
+          "url": "https://x.com/itsToghrul/status/2026811313146462540",
+          "links": []
+        },
+        {
+          "text": "You might wanna multiply your bill by 5X. If you’re paying that much for Claude and your coding with it, you ain’t doing nothing.",
+          "author": "Kevin",
+          "handle": "@TheGeodexes",
+          "url": "https://x.com/TheGeodexes/status/2026767431738200151",
+          "links": []
+        },
+        {
+          "text": "2016 - 2025 could have done it  with an EC2 + any SQL NOSQL and with docker it was easy, turnkey. You could write it over the weekend, solo, no AI.\nVercel is awesome, but you could build that shit with next + CI/CD + above.\nStop over exaggerating.\ncalm your engagement tits.",
+          "author": "ErezT",
+          "handle": "@ml_yearzero",
+          "url": "https://x.com/ml_yearzero/status/2026912873226842364",
+          "links": []
+        }
+      ]
+    },
+    {
+      "text": "Having cofounded the very first cloud based IDE way before Codespaces and now running a sandbox company.\n\nall I can say is it’s about fing time",
+      "author": "Ivan Burazin",
+      "handle": "@ivanburazin",
+      "url": "https://x.com/ivanburazin/status/2026843285822779850",
+      "time": "2026-02-25T19:20:05.000Z",
+      "media": {
+        "images": [
+          "https://pbs.twimg.com/media/HCBqh41XQAAVKd-?format=jpg&name=small"
+        ],
+        "videos": []
+      },
+      "links": [],
+      "cardLinks": [],
+      "replies": [
+        {
+          "text": "Ivan, you have no idea how big the demand for sandbox products like your is going to get. Buckle up.",
+          "author": "Hesham Ghandour",
+          "handle": "@heshamghandour",
+          "url": "https://x.com/heshamghandour/status/2026994999930589294",
+          "links": []
+        },
+        {
+          "text": "Your posting game is off the charts, you've sold me on sandboxes to the point I'm ripping out our free azure firecracker sandboxes for you guys. Would appreciate it if you could provide a coupon for Daytona so we don't blow through all our angel funding on sandboxes.",
+          "author": "Actuary",
+          "handle": "@SpaceRocket_Man",
+          "url": "https://x.com/SpaceRocket_Man/status/2026903657799987235",
+          "links": []
+        }
+      ]
+    }
+  ]
+}
