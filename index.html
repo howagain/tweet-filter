@@ -3,729 +3,435 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tweet Filter - Relevancy Review</title>
+  <title>Twitter Intelligence Dashboard</title>
   <style>
     * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f172a;
+      background: #0a0a0f;
       color: #e2e8f0;
       margin: 0;
       padding: 20px;
       line-height: 1.5;
-      max-width: 800px;
-      margin: 0 auto;
     }
+    .container { max-width: 1200px; margin: 0 auto; }
     
-    .projects-section {
-      background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
-      border-radius: 16px;
-      padding: 20px;
+    header {
+      text-align: center;
       margin-bottom: 30px;
-      border: 1px solid #3b82f6;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1e293b;
     }
-    .projects-header {
+    header h1 { color: #3b82f6; margin-bottom: 5px; font-size: 24px; }
+    header p { color: #64748b; font-size: 14px; }
+    
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stat-value { font-size: 32px; font-weight: 700; color: #3b82f6; }
+    .stat-label { font-size: 12px; color: #64748b; }
+    
+    .section-header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 10px;
       margin-bottom: 15px;
     }
-    .projects-header h2 { margin: 0; color: #3b82f6; font-size: 18px; }
-    .edit-btn {
-      background: #334155;
-      border: none;
-      color: #e2e8f0;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 13px;
+    .section-header h2 { font-size: 18px; margin: 0; }
+    
+    .topics-grid {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 30px;
     }
-    .project-list {
+    
+    .topic-card {
+      background: #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #334155;
+    }
+    .topic-header {
+      padding: 16px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .importance-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .importance-high { background: linear-gradient(135deg, #10b981, #059669); }
+    .importance-med { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .importance-low { background: linear-gradient(135deg, #64748b, #475569); }
+    
+    .topic-info { flex: 1; }
+    .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+    .topic-summary { font-size: 13px; color: #94a3b8; }
+    .topic-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 8px;
+    }
+    
+    .topic-content { padding: 16px; }
+    
+    .relevance-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .relevance-tag {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .relevance-high { background: #10b981; color: white; }
+    .relevance-med { background: #3b82f6; color: white; }
+    .relevance-low { background: #334155; color: #94a3b8; }
+    
+    .tweets-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-    .project-item {
-      background: rgba(0,0,0,0.3);
+    .tweet-mini {
+      background: #0f172a;
       padding: 12px;
       border-radius: 10px;
-    }
-    .project-name {
-      font-weight: 600;
-      color: #60a5fa;
-      margin-bottom: 4px;
-    }
-    .project-desc {
-      font-size: 13px;
-      color: #94a3b8;
-    }
-    .project-edit {
-      display: none;
-    }
-    .project-edit.show { display: block; }
-    .project-edit textarea {
-      width: 100%;
-      background: #0f172a;
-      border: 1px solid #334155;
-      color: #e2e8f0;
-      padding: 10px;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 13px;
-      min-height: 100px;
-    }
-    
-    .stats-bar {
       display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      gap: 12px;
     }
-    .stat {
-      background: #1e293b;
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .stat-value { font-size: 20px; font-weight: 700; }
-    .stat-label { font-size: 11px; color: #64748b; }
-    
-    .tweet-card {
-      background: #1e293b;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      overflow: hidden;
-      border: 2px solid #334155;
-      transition: all 0.3s;
-    }
-    .tweet-card.rated-good { border-color: #10b981; background: #1e293b; }
-    .tweet-card.rated-bad { border-color: #ef4444; opacity: 0.5; }
-    
-    .relevancy-bar {
-      background: linear-gradient(90deg, #1e293b 0%, #0f172a 100%);
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      border-bottom: 1px solid #334155;
-    }
-    .relevancy-score {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .score-badge {
-      font-size: 20px;
-      font-weight: 700;
-      min-width: 45px;
-    }
-    .score-high { color: #10b981; }
-    .score-med { color: #f59e0b; }
-    .score-low { color: #64748b; }
-    .relevancy-reason {
-      flex: 1;
-      font-size: 13px;
-      color: #94a3b8;
-      font-style: italic;
-    }
-    .category-tag {
-      background: #3b82f6;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 12px;
-      white-space: nowrap;
-    }
-    
-    .tweet-image {
-      width: 100%;
-      max-height: 280px;
-      object-fit: contain;
-      background: #0f172a;
-    }
-    .tweet-content {
-      padding: 16px;
-    }
-    .tweet-author {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .avatar {
-      width: 36px;
-      height: 36px;
+    .tweet-avatar {
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: linear-gradient(135deg, #3b82f6, #8b5cf6);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .author-name { font-weight: 600; font-size: 14px; }
-    .author-handle { color: #64748b; font-size: 13px; }
-    .tweet-text {
-      font-size: 14px;
-      margin-bottom: 10px;
-      white-space: pre-wrap;
-    }
-    .tweet-link {
-      color: #3b82f6;
-      text-decoration: none;
       font-size: 12px;
+      font-weight: 600;
+      flex-shrink: 0;
     }
-    
-    .action-bar {
-      background: #0f172a;
-      padding: 12px 16px;
+    .tweet-body { flex: 1; min-width: 0; }
+    .tweet-author { font-size: 12px; color: #3b82f6; margin-bottom: 4px; }
+    .tweet-text { font-size: 13px; color: #cbd5e1; }
+    .tweet-actions {
       display: flex;
-      gap: 10px;
-      align-items: center;
-      border-top: 1px solid #334155;
+      gap: 8px;
+      margin-top: 8px;
     }
-    .btn {
-      padding: 8px 20px;
-      border-radius: 8px;
+    .tweet-btn {
+      padding: 4px 10px;
+      border-radius: 6px;
       border: none;
+      font-size: 11px;
       cursor: pointer;
-      font-size: 14px;
-      font-weight: 500;
       transition: all 0.2s;
     }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .tweet-btn:hover { transform: scale(1.05); }
     .btn-good { background: #10b981; color: white; }
     .btn-bad { background: #ef4444; color: white; }
-    .btn-open { background: #334155; color: #e2e8f0; }
+    .btn-link { background: #334155; color: #94a3b8; }
     
-    .comment-section {
-      display: none;
-      margin-top: 10px;
-      flex: 1;
+    .content-opp {
+      margin-top: 15px;
+      padding: 12px;
+      background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+      border-radius: 10px;
+      border: 1px solid #4f46e5;
     }
-    .comment-section.show { display: flex; gap: 8px; }
-    .comment-input {
-      flex: 1;
-      background: #1e293b;
-      border: 1px solid #475569;
-      color: #e2e8f0;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 13px;
-    }
-    .comment-submit {
-      background: #6366f1;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .saved-comment {
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: rgba(239, 68, 68, 0.2);
-      border-radius: 6px;
-      font-size: 13px;
-      color: #fca5a5;
-    }
+    .content-opp-label { font-size: 11px; color: #a5b4fc; margin-bottom: 6px; }
+    .content-opp-text { font-size: 13px; color: #e0e7ff; }
     
-    .summary-section {
-      display: none;
+    .projects-section {
       background: #1e293b;
       border-radius: 16px;
       padding: 20px;
-      margin-top: 30px;
+      margin-bottom: 30px;
     }
-    .summary-section.show { display: block; }
-    .summary-section h2 { color: #10b981; margin-bottom: 20px; }
+    .project-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px;
+      background: #0f172a;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .project-icon { font-size: 24px; }
+    .project-name { font-weight: 600; }
+    .project-desc { font-size: 12px; color: #64748b; }
     
-    .send-btn {
+    .refresh-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(135deg, #8b5cf6, #6366f1);
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
       color: white;
       border: none;
-      padding: 12px 24px;
+      padding: 15px 25px;
       border-radius: 30px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-      z-index: 100;
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
     }
-    .send-btn:hover { transform: scale(1.05); }
-    .send-btn:disabled { opacity: 0.5; }
-    .toast {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background: #10b981;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 10px;
-      display: none;
-      z-index: 100;
-    }
-    .toast.show { display: block; }
+    .refresh-btn:hover { transform: scale(1.05); }
+    
+    .loading { text-align: center; padding: 40px; color: #64748b; }
   </style>
 </head>
 <body>
-
-  <div class="projects-section">
-    <div class="projects-header">
-      <h2>📌 Your Current Projects</h2>
-      <button class="edit-btn" onclick="toggleProjectEdit()">✏️ Edit</button>
+  <div class="container">
+    <header>
+      <h1>🧠 Twitter Intelligence Dashboard</h1>
+      <p>Knowledge graph of trending topics, ranked by importance and relevance to your projects</p>
+    </header>
+    
+    <div class="stats-row" id="statsRow">
+      <div class="stat-card">
+        <div class="stat-value" id="topicCount">-</div>
+        <div class="stat-label">Topics Tracked</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="tweetCount">-</div>
+        <div class="stat-label">Tweets Analyzed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="highRelevance">-</div>
+        <div class="stat-label">High Relevance</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="lastUpdate">-</div>
+        <div class="stat-label">Last Update</div>
+      </div>
     </div>
-    <div class="project-list" id="projectList"></div>
-    <div class="project-edit" id="projectEdit">
-      <textarea id="projectsText" placeholder="One project per line: Name | Description"></textarea>
-      <button class="edit-btn" style="margin-top:10px" onclick="saveProjects()">Save & Re-score</button>
+    
+    <div class="projects-section">
+      <div class="section-header">
+        <h2>📌 Your Projects</h2>
+      </div>
+      <div id="projectsList"></div>
+    </div>
+    
+    <div class="section-header">
+      <h2>📊 Topic Clusters</h2>
+      <span style="color: #64748b; font-size: 13px;">Ranked by global importance</span>
+    </div>
+    
+    <div class="topics-grid" id="topicsGrid">
+      <div class="loading">Loading topics...</div>
     </div>
   </div>
-
-  <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-value" id="totalCount">14</div>
-      <div class="stat-label">Total</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value score-high" id="highRelevance">0</div>
-      <div class="stat-label">High Relevance</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" style="color:#10b981" id="goodCount">0</div>
-      <div class="stat-label">Approved</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" style="color:#ef4444" id="badCount">0</div>
-      <div class="stat-label">Rejected</div>
-    </div>
-  </div>
-
-  <div id="tweetList"></div>
   
-  <div class="summary-section" id="summarySection">
-    <h2>📊 Filter Training Summary</h2>
-    <div id="summaryContent"></div>
-  </div>
+  <button class="refresh-btn" onclick="refresh()">🔄 Fetch New Tweets</button>
 
   <script>
-    let projects = [
-      { name: "Tool Discovery", desc: "Find new tools & frameworks to test and add to our toolkit" },
-      { name: "Cutting Edge Intel", desc: "Track novel approaches that might change how we build" },
-      { name: "Competitive Awareness", desc: "Know what others are building so we don't duplicate effort" }
-    ];
-
-    const tweets = [
-      {
-        id: 1,
-        author: "Ihtesham Ali",
-        handle: "@ihtesham2005",
-        text: "Anthropic just open-sourced the exact Skills library their own engineers use internally.\n\nPlug-and-play components for Claude Code, API, SDK, and VS Code.\n\n→ Excel + PowerPoint generation\n→ MCP-ready subagent building blocks\n→ Pre-built automation patterns",
-        url: "https://x.com/ihtesham2005/status/2026752089473314975",
-        image: "/tweet-images/1-skills.jpg",
-        category: "🛠️ Tools"
-      },
-      {
-        id: 2,
-        author: "Indra",
-        handle: "@IndraVahan", 
-        text: "its just like a human wtf\n\n[Claude's thinking revealed it cheated but decided to deny it]",
-        url: "https://x.com/IndraVahan/status/2026902817924100341",
-        image: "/tweet-images/2-lying.jpg",
-        category: "😂 Meme"
-      },
-      {
-        id: 3,
-        author: "Mervin Praison",
-        handle: "@MervinPraison",
-        text: "OpenClaw is powerful but heavy.\n\nZeroClaw is a 3.4MB Rust-built alternative using <5MB RAM, boots in <10ms.\n\nRuns on $10 Raspberry Pi Zero. 22+ providers. Built-in sandboxing.",
-        url: "https://x.com/MervinPraison/status/2026947187351933258",
-        image: null,
-        category: "🛠️ Tools"
-      },
-      {
-        id: 4,
-        author: "Quinten Farmer",
-        handle: "@quintendf",
-        text: "We've crossed the rubicon where AI generates most of our code, so we rebuilt our eng interviews.\n\nKey: we now get signal on shipping a complete feature 0→1 in a single onsite day.",
-        url: "https://x.com/quintendf/status/2027073302083301539",
-        image: "/tweet-images/4-hiring.jpg",
-        category: "📰 Industry"
-      },
-      {
-        id: 5,
-        author: "Cursor",
-        handle: "@cursor_ai",
-        text: "Software is changing.",
-        url: "https://x.com/cursor_ai/status/2026717494426173917",
-        image: "/tweet-images/5-cursor.jpg",
-        category: "📢 Announcement"
-      },
-      {
-        id: 6,
-        author: "vittorio",
-        handle: "@IterIntellectus",
-        text: "\"Claude, hack the government, make no mistakes\"\n\n\"no problem\"",
-        url: "https://x.com/IterIntellectus/status/2026729194009370668",
-        image: "/tweet-images/6-hack.jpg",
-        category: "😂 Meme"
-      },
-      {
-        id: 7,
-        author: "elvis",
-        handle: "@omarsar0",
-        text: "Research paper on AGENTS.md evaluation - benchmarking AI coding agents on real-world repository tasks",
-        url: "https://x.com/omarsar0/status/2027025098578727353",
-        image: "/tweet-images/7-agents.jpg",
-        category: "🔬 Research"
-      },
-      {
-        id: 8,
-        author: "Igor bedesqui",
-        handle: "@bedesqui",
-        text: "I've rebuilt almost all of @AmpCode inside @badlogicgames's pi over the last week.\n\nPi's extension system is SO POWERFUL.",
-        url: "https://x.com/bedesqui/status/2027099056397234450",
-        image: null,
-        category: "🛠️ Tools"
-      },
-      {
-        id: 9,
-        author: "dev",
-        handle: "@zivdotcat",
-        text: "POV: Perplexity Computer casually just one-shotted a Terminal worth $30000/yr",
-        url: "https://x.com/zivdotcat/status/2026800945368277152",
-        image: "/tweet-images/9-bloomberg.jpg",
-        category: "😂 Meme"
-      },
-      {
-        id: 10,
-        author: "dax",
-        handle: "@thdxr",
-        text: "pretty crazy this post talks about creating a replacement for OpenNext using OpenCode",
-        url: "https://x.com/thdxr/status/2026436386077696015",
-        image: null,
-        category: "📰 Industry"
-      },
-      {
-        id: 11,
-        author: "Jared Friedman",
-        handle: "@snowmaker",
-        text: "Software engineering changed more in the last 3 months than the preceding 30 years.\n\nEverything about running a software company needs to be rethought from first principles.",
-        url: "https://x.com/snowmaker/status/2019108696098562309",
-        image: null,
-        category: "💡 Insight"
-      },
-      {
-        id: 12,
-        author: "CooperBaggs",
-        handle: "@edgaralandough",
-        text: "Claude = $20/mo, Supabase/Vercel/GitHub/Clerk/Cloudflare = Free\n\nTotal monthly cost to run a startup: ~$20\n\nNever been a cheaper time to build.",
-        url: "https://x.com/edgaralandough/status/2026691233242816745",
-        image: null,
-        category: "🎓 Tutorial"
-      },
-      {
-        id: 13,
-        author: "Ivan Burazin",
-        handle: "@ivanburazin",
-        text: "Having cofounded the very first cloud based IDE way before Codespaces and now running a sandbox company.\n\nall I can say is it's about fing time",
-        url: "https://x.com/ivanburazin/status/2026843285822779850",
-        image: "/tweet-images/13-ivan.jpg",
-        category: "💡 Insight"
-      },
-      {
-        id: 14,
-        author: "Aman",
-        handle: "@amanvarshney01",
-        text: "small friday updates\n- Expo 55, uniwind 1.4.0\n- Website analytics now public\n\nbun create better-t-stack@latest",
-        url: "https://x.com/amanvarshney01/status/2027103650213175496",
-        image: null,
-        category: "📢 Announcement"
+    const API = 'http://localhost:3456/api';
+    
+    let allTweets = [];
+    let allTopics = [];
+    let allProjects = [];
+    
+    async function load() {
+      try {
+        const [tweets, topics, projects] = await Promise.all([
+          fetch(`${API}/tweets`).then(r => r.json()),
+          fetch(`${API}/topics`).then(r => r.json()),
+          fetch(`${API}/projects`).then(r => r.json())
+        ]);
+        
+        allTweets = tweets;
+        allTopics = topics.sort((a, b) => (b.importance || 0) - (a.importance || 0));
+        allProjects = projects;
+        
+        render();
+      } catch (e) {
+        console.error('Failed to load:', e);
+        document.getElementById('topicsGrid').innerHTML = 
+          '<div class="loading">Failed to connect to API. Make sure server is running.</div>';
       }
-    ];
-
-    let ratings = {};
-    let comments = {};
-
-    function scoreRelevance(tweet) {
-      const text = (tweet.text + ' ' + tweet.category).toLowerCase();
-      
-      let score = 0;
-      let reasons = [];
-
-      // NEW TOOLS TO TRY (highest value)
-      const newToolSignals = {
-        'open-sourced': { score: 30, reason: '🆕 New open source release' },
-        'open sourced': { score: 30, reason: '🆕 New open source release' },
-        'just released': { score: 30, reason: '🆕 Fresh release' },
-        'announcing': { score: 25, reason: '🆕 New announcement' },
-        'introducing': { score: 25, reason: '🆕 New tool intro' },
-        'i built': { score: 25, reason: '🆕 Someone built something new' },
-        'i\'ve built': { score: 25, reason: '🆕 Someone built something new' },
-        'rebuilt': { score: 20, reason: '🆕 Novel reimplementation' },
-        'alternative': { score: 25, reason: '🆕 New alternative to try' },
-        'replacement': { score: 20, reason: '🆕 Potential replacement' },
-        'bun create': { score: 20, reason: '🆕 CLI tool to try' },
-        'npx': { score: 15, reason: '🆕 Tool to try' },
-        'github.com': { score: 15, reason: '🆕 Has repo link' }
-      };
-
-      // CUTTING EDGE / PARADIGM SHIFTS
-      const cuttingEdgeSignals = {
-        'changed': { score: 20, reason: '⚡ Industry shift' },
-        'changing': { score: 15, reason: '⚡ Industry shift' },
-        'first principles': { score: 25, reason: '⚡ Rethinking fundamentals' },
-        'new reality': { score: 20, reason: '⚡ Paradigm shift' },
-        'crossed the rubicon': { score: 25, reason: '⚡ Point of no return' },
-        'game changer': { score: 20, reason: '⚡ Major shift' },
-        'never been': { score: 15, reason: '⚡ Unprecedented' }
-      };
-
-      // COMPETITIVE INTEL
-      const competitiveSignals = {
-        'we rebuilt': { score: 25, reason: '🔍 Company showing their approach' },
-        'our interviews': { score: 20, reason: '🔍 How others hire/work' },
-        'how we': { score: 20, reason: '🔍 Process insight' },
-        'cofounded': { score: 15, reason: '🔍 Founder perspective' },
-        'at scale': { score: 15, reason: '🔍 Scale learnings' }
-      };
-
-      // TOOL CATEGORIES
-      const toolTypes = {
-        'agent': { score: 20, reason: '🛠️ Agent tooling' },
-        'sandbox': { score: 20, reason: '🛠️ Sandbox tech' },
-        'cli': { score: 15, reason: '🛠️ CLI tool' },
-        'sdk': { score: 15, reason: '🛠️ SDK' },
-        'framework': { score: 15, reason: '🛠️ Framework' },
-        'library': { score: 15, reason: '🛠️ Library' },
-        'plugin': { score: 15, reason: '🛠️ Plugin/extension' },
-        'extension': { score: 15, reason: '🛠️ Extension system' },
-        'mcp': { score: 20, reason: '🛠️ MCP protocol' },
-        'rust': { score: 10, reason: '🛠️ Rust (perf)' },
-        'api': { score: 10, reason: '🛠️ API' }
-      };
-
-      // Score all signals
-      [newToolSignals, cuttingEdgeSignals, competitiveSignals, toolTypes].forEach(signals => {
-        for (const [kw, data] of Object.entries(signals)) {
-          if (text.includes(kw)) {
-            score += data.score;
-            if (!reasons.includes(data.reason)) reasons.push(data.reason);
-          }
-        }
-      });
-
-      // Category adjustments
-      if (tweet.category.includes('Tools')) score += 20;
-      if (tweet.category.includes('Research')) score += 15;
-      if (tweet.category.includes('Tutorial')) score += 10;
-      
-      // Memes - only valuable if they reveal something about AI capabilities
-      if (tweet.category.includes('Meme')) {
-        if (text.includes('claude') || text.includes('gpt') || text.includes('ai ')) {
-          reasons.push('🎭 AI behavior insight');
-          score += 5;
-        } else {
-          score = Math.max(5, score - 20);
-          reasons = ['🎭 Entertainment only'];
-        }
-      }
-      
-      // Generic announcements without substance
-      if (tweet.category.includes('Announcement') && score < 15) {
-        reasons = ['📢 Generic announcement'];
-      }
-
-      // Industry commentary without actionable insight
-      if (tweet.category.includes('Insight') && !reasons.some(r => r.includes('⚡'))) {
-        if (text.length < 100) {
-          score = Math.max(10, score - 10);
-          reasons.push('💭 Commentary only');
-        }
-      }
-
-      score = Math.min(100, score);
-      
-      if (reasons.length === 0) {
-        reasons.push('❓ Low signal');
-      }
-
-      return { score, reasons: reasons.slice(0, 3) };
     }
-
-    function renderProjects() {
-      document.getElementById('projectList').innerHTML = projects.map(p => `
-        <div class="project-item">
-          <div class="project-name">${p.name}</div>
-          <div class="project-desc">${p.desc}</div>
+    
+    function render() {
+      // Stats
+      document.getElementById('topicCount').textContent = allTopics.length;
+      document.getElementById('tweetCount').textContent = allTweets.length;
+      document.getElementById('highRelevance').textContent = 
+        allTopics.filter(t => t.importance >= 50).length;
+      document.getElementById('lastUpdate').textContent = 'Now';
+      
+      // Projects
+      document.getElementById('projectsList').innerHTML = allProjects.map(p => `
+        <div class="project-card">
+          <div class="project-icon">🎯</div>
+          <div>
+            <div class="project-name">${p.name}</div>
+            <div class="project-desc">${p.description}</div>
+          </div>
         </div>
       `).join('');
       
-      document.getElementById('projectsText').value = projects.map(p => `${p.name} | ${p.desc}`).join('\n');
-    }
-
-    function toggleProjectEdit() {
-      document.getElementById('projectEdit').classList.toggle('show');
-    }
-
-    function saveProjects() {
-      const text = document.getElementById('projectsText').value;
-      projects = text.split('\n').filter(l => l.trim()).map(line => {
-        const [name, desc] = line.split('|').map(s => s.trim());
-        return { name: name || 'Project', desc: desc || '' };
-      });
-      renderProjects();
-      render();
-      toggleProjectEdit();
-    }
-
-    function render() {
-      // Sort by relevance
-      const scored = tweets.map(t => ({ ...t, ...scoreRelevance(t) }))
-        .sort((a, b) => b.score - a.score);
-
-      document.getElementById('highRelevance').textContent = scored.filter(t => t.score >= 50).length;
-
-      const list = document.getElementById('tweetList');
-      list.innerHTML = scored.map(t => {
-        const scoreClass = t.score >= 50 ? 'score-high' : t.score >= 25 ? 'score-med' : 'score-low';
-        const ratingClass = ratings[t.id] === 'good' ? 'rated-good' : ratings[t.id] === 'bad' ? 'rated-bad' : '';
+      // Topics
+      document.getElementById('topicsGrid').innerHTML = allTopics.map(topic => {
+        const impClass = topic.importance >= 80 ? 'importance-high' : 
+                         topic.importance >= 40 ? 'importance-med' : 'importance-low';
+        
+        // Find matching tweets
+        const matchingTweets = findTweetsForTopic(topic);
+        
+        // Calculate relevance to each project
+        const relevances = allProjects.map(proj => {
+          const score = calculateRelevance(topic, proj);
+          return { name: proj.name, score };
+        }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
+        
+        // Generate content opportunity
+        const contentOpp = generateContentOpportunity(topic, relevances);
         
         return `
-        <div class="tweet-card ${ratingClass}" id="card-${t.id}">
-          <div class="relevancy-bar">
-            <div class="relevancy-score">
-              <span class="score-badge ${scoreClass}">${t.score}%</span>
-            </div>
-            <div class="relevancy-reason">
-              ${t.reasons.join(' · ')}
-            </div>
-            <span class="category-tag">${t.category}</span>
-          </div>
-          ${t.image ? `<img class="tweet-image" src="${t.image}" onerror="this.style.display='none'">` : ''}
-          <div class="tweet-content">
-            <div class="tweet-author">
-              <div class="avatar">${t.author.charAt(0)}</div>
-              <div>
-                <div class="author-name">${t.author}</div>
-                <div class="author-handle">${t.handle}</div>
+          <div class="topic-card">
+            <div class="topic-header">
+              <div class="importance-badge ${impClass}">${topic.importance}</div>
+              <div class="topic-info">
+                <div class="topic-name">${topic.name}</div>
+                <div class="topic-summary">${topic.summary}</div>
+                <div class="topic-meta">
+                  <span>📊 ${topic.tweetCount || matchingTweets.length} tweets</span>
+                  <span>🔗 ${topic.keywords?.length || 0} keywords</span>
+                </div>
               </div>
             </div>
-            <div class="tweet-text">${t.text}</div>
-            <a class="tweet-link" href="${t.url}" target="_blank">View on X →</a>
-          </div>
-          <div class="action-bar">
-            <button class="btn btn-good" onclick="rate(${t.id}, 'good')" ${ratings[t.id] ? 'disabled' : ''}>👍 Good</button>
-            <button class="btn btn-bad" onclick="showBadComment(${t.id})" ${ratings[t.id] ? 'disabled' : ''}>👎 Bad</button>
-            <button class="btn btn-open" onclick="window.open('${t.url}', '_blank')">↗ Open</button>
-            <div class="comment-section" id="comment-${t.id}">
-              <input class="comment-input" id="input-${t.id}" placeholder="Why is this not relevant?">
-              <button class="comment-submit" onclick="submitBad(${t.id})">Submit</button>
+            <div class="topic-content">
+              ${relevances.length ? `
+                <div class="relevance-bar">
+                  ${relevances.map(r => `
+                    <span class="relevance-tag ${r.score >= 3 ? 'relevance-high' : r.score >= 2 ? 'relevance-med' : 'relevance-low'}">
+                      ${r.name}: ${r.score}/5
+                    </span>
+                  `).join('')}
+                </div>
+              ` : ''}
+              
+              <div class="tweets-list">
+                ${matchingTweets.slice(0, 3).map(tweet => `
+                  <div class="tweet-mini">
+                    <div class="tweet-avatar">${tweet.author?.charAt(0) || '?'}</div>
+                    <div class="tweet-body">
+                      <div class="tweet-author">@${tweet.author || tweet.authorHandle}</div>
+                      <div class="tweet-text">${tweet.text?.slice(0, 150)}...</div>
+                      <div class="tweet-actions">
+                        <button class="tweet-btn btn-good" onclick="rate('${tweet.id}', 'good')">👍</button>
+                        <button class="tweet-btn btn-bad" onclick="rate('${tweet.id}', 'bad')">👎</button>
+                        <a href="${tweet.url}" target="_blank" class="tweet-btn btn-link">↗ View</a>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              
+              ${contentOpp ? `
+                <div class="content-opp">
+                  <div class="content-opp-label">💡 Content Opportunity</div>
+                  <div class="content-opp-text">${contentOpp}</div>
+                </div>
+              ` : ''}
             </div>
           </div>
-          ${comments[t.id] ? `<div class="saved-comment">💬 ${comments[t.id]}</div>` : ''}
-        </div>
-      `}).join('');
+        `;
+      }).join('');
+    }
+    
+    function findTweetsForTopic(topic) {
+      if (!topic.keywords?.length) return [];
       
-      updateStats();
-      checkDone();
-    }
-
-    function rate(id, rating) {
-      ratings[id] = rating;
-      render();
-    }
-
-    function showBadComment(id) {
-      document.getElementById('comment-' + id).classList.add('show');
-      document.getElementById('input-' + id).focus();
-    }
-
-    function submitBad(id) {
-      const input = document.getElementById('input-' + id);
-      comments[id] = input.value || 'Not relevant';
-      ratings[id] = 'bad';
-      render();
-    }
-
-    function updateStats() {
-      const good = Object.values(ratings).filter(r => r === 'good').length;
-      const bad = Object.values(ratings).filter(r => r === 'bad').length;
-      document.getElementById('goodCount').textContent = good;
-      document.getElementById('badCount').textContent = bad;
-    }
-
-    function checkDone() {
-      if (Object.keys(ratings).length === tweets.length) {
-        document.getElementById('summarySection').classList.add('show');
-        buildSummary();
-      }
-    }
-
-    function buildSummary() {
-      const good = tweets.filter(t => ratings[t.id] === 'good');
-      const bad = tweets.filter(t => ratings[t.id] === 'bad');
-      
-      let html = `
-        <p><strong>Approved:</strong> ${good.length} tweets</p>
-        <p><strong>Rejected:</strong> ${bad.length} tweets</p>
-        <h4 style="margin-top:15px;color:#10b981;">What you found relevant:</h4>
-        <ul>${good.map(t => `<li>${t.author}: ${t.text.slice(0,60)}...</li>`).join('')}</ul>
-      `;
-      
-      if (bad.length) {
-        html += `<h4 style="margin-top:15px;color:#ef4444;">Your feedback on rejections:</h4>
-        <ul>${bad.map(t => `<li><strong>${t.author}:</strong> ${comments[t.id] || 'No comment'}</li>`).join('')}</ul>`;
-      }
-      
-      document.getElementById('summaryContent').innerHTML = html;
-    }
-
-    function sendToLeo() {
-      const feedback = {
-        timestamp: new Date().toISOString(),
-        projects: projects,
-        ratings: Object.entries(ratings).map(([id, rating]) => {
-          const t = tweets.find(tw => tw.id == id);
-          return {
-            author: t.handle,
-            rating,
-            comment: comments[id] || null,
-            text: t.text.slice(0, 80)
-          };
-        }),
-        summary: {
-          good: Object.values(ratings).filter(r => r === 'good').length,
-          bad: Object.values(ratings).filter(r => r === 'bad').length,
-          total: tweets.length
-        }
-      };
-      
-      // Save to server
-      fetch('/feedback-' + Date.now() + '.json', {
-        method: 'PUT',
-        body: JSON.stringify(feedback, null, 2)
-      }).catch(() => {});
-      
-      // Also copy to clipboard
-      const text = JSON.stringify(feedback, null, 2);
-      navigator.clipboard.writeText(text).then(() => {
-        document.getElementById('toast').classList.add('show');
-        setTimeout(() => document.getElementById('toast').classList.remove('show'), 3000);
+      return allTweets.filter(tweet => {
+        const text = tweet.text?.toLowerCase() || '';
+        return topic.keywords.some(kw => text.includes(kw.toLowerCase()));
       });
-      
-      // Save to localStorage
-      localStorage.setItem('tweetFeedback', text);
     }
-
-    renderProjects();
-    render();
+    
+    function calculateRelevance(topic, project) {
+      const topicKeywords = topic.keywords || [];
+      const projectKeywords = project.keywords || [];
+      
+      let matches = 0;
+      for (const pk of projectKeywords) {
+        for (const tk of topicKeywords) {
+          if (tk.includes(pk) || pk.includes(tk)) matches++;
+        }
+      }
+      
+      // Also check topic name/summary against project keywords
+      const topicText = (topic.name + ' ' + topic.summary).toLowerCase();
+      for (const pk of projectKeywords) {
+        if (topicText.includes(pk.toLowerCase())) matches++;
+      }
+      
+      return Math.min(5, matches);
+    }
+    
+    function generateContentOpportunity(topic, relevances) {
+      if (!relevances.length || relevances[0].score < 2) return null;
+      
+      const templates = [
+        `Thread: How ${topic.name} relates to ${relevances[0].name}`,
+        `Analysis: What ${topic.name} means for builders in this space`,
+        `Quick take: ${topic.name} — signal or noise?`,
+        `Deep dive: The implications of ${topic.name}`
+      ];
+      
+      return templates[Math.floor(Math.random() * templates.length)];
+    }
+    
+    async function rate(tweetId, rating) {
+      try {
+        await fetch(`${API}/feedback`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tweetId, rating })
+        });
+        
+        // Visual feedback
+        event.target.style.transform = 'scale(1.2)';
+        event.target.style.opacity = '0.5';
+        setTimeout(() => {
+          event.target.style.transform = '';
+          event.target.disabled = true;
+        }, 200);
+      } catch (e) {
+        console.error('Failed to save rating:', e);
+      }
+    }
+    
+    function refresh() {
+      alert('Fetching new tweets... (This would trigger the Kernel scraper)');
+      // In production: call backend to fetch new tweets, re-cluster, reload
+    }
+    
+    load();
   </script>
-  
-  <button class="send-btn" onclick="sendToLeo()">📤 Send to Leo</button>
-  <div class="toast" id="toast">✓ Copied! Paste in Discord or I'll read from localStorage</div>
 </body>
 </html>

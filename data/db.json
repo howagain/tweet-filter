@@ -1,0 +1,324 @@
+{
+  "tweets": [
+    {
+      "text": "Damn I've already started building on top of zeroclaw but the folks at Nous are extremely high taste individuals so this is probably going to be really good",
+      "author": "JsonBasedman",
+      "time": "2026-02-25T23:49:02.000Z",
+      "url": "https://x.com/JsonBasedman/status/2026806675097723241",
+      "id": "1772153734320ctctjyf7s2",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "OpenClaw, but built for normal people.\n\nSim is an open-source platform that lets you build AI agent workflows on a drag-and-drop canvas. Connect them to channels like Telegram and WhatsApp and deploy without writing a single line of code.\n\nThey also have a built-in Copilot that",
+      "author": "akshay_pachaar",
+      "time": "2026-02-26T12:40:10.000Z",
+      "url": "https://x.com/akshay_pachaar/status/2027000739109974528",
+      "id": "1772153734320mh57caluug",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "OpenCode Go is a low cost ($10/month) subscription designed to bring agentic coding to programmers around the world\n\nit provides generous limits and reliable access to the most capable open source models\n\nrun /connect and select OpenCode Go to get started",
+      "author": "opencode",
+      "time": "2026-02-25T07:03:44.000Z",
+      "url": "https://x.com/opencode/status/2026553685468135886",
+      "id": "1772153734320too5bpcd89a",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "We've rolled out a new auto-memory feature.\n\nClaude now remembers what it learns across sessions — your project context, debugging patterns, preferred approaches — and recalls it later without you having to write anything down.",
+      "author": "trq212",
+      "time": "2026-02-26T19:51:51.000Z",
+      "url": "https://x.com/trq212/status/2027109375765356723",
+      "id": "1772153734320cj5wp2ll356",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "Baby keem is using openclaw and you’re still writing code by hand",
+      "author": "theo",
+      "time": "2026-02-26T03:25:59.000Z",
+      "url": "https://x.com/theo/status/2026861274550906910",
+      "id": "17721537343202jq0e4cioud",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "If only there were an agent runtime that provided:\n\n agent isolation\n per-agent file system\n durable memory\n transactional execution\n horizontal scalability\n quota management\n\nIf such a thing existed, it could potentially become the distributed 'OS' of the future. ",
+      "author": "jdegoes",
+      "time": "2026-02-22T19:44:01.000Z",
+      "url": "https://x.com/jdegoes/status/2025657850391822792",
+      "id": "1772153734320d00hiyyht8v",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "One of the most important questions for founders is: How do I make sure agents know about my product and service and choose it? All the old tricks won’t work. \n\nPeople who figure this out will win big",
+      "author": "garrytan",
+      "time": "2026-02-17T14:55:39.000Z",
+      "url": "https://x.com/garrytan/status/2023773343124537411",
+      "id": "1772153734320im5vr63pdxl",
+      "fetchedAt": 1772153734320
+    },
+    {
+      "text": "Block added $8B in market cap today on the news that they fired half their employees because of AI\n\nEvery CEO and CFO is going to be talking about this tomorrow. They all want the same thing.\n\nWall Street just told every company in America that replacing people with AI gets",
+      "author": "JamesonCamp",
+      "time": "2026-02-26T22:22:12.000Z",
+      "url": "https://x.com/JamesonCamp/status/2027147210874577293",
+      "id": "1772153734333ttov1xajy0h",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "Coming March 3 at 9:00 AM PT, our first Microsoft Research Forum episode of the year. \n\nNew ARO, Dion2, Magentic Marketplace, OptiMind, Agent Lightning, and Healthbots. \n\nRegister to watch:",
+      "author": "MSFTResearch",
+      "time": "",
+      "url": "https://x.com/MSFTResearch/status/2024201223688385001/analytics",
+      "id": "1772153734333a8ca17y4frd",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "Honestly one of the better CEO notes I’ve read. \n\nVery generous package, immediate mention of next steps (expect an email tomorrow), “rather it be awkward and human”, org-wide call for maximum transparency, reiteration of business strength and growth (for the 6000 still there and",
+      "author": "alliekmiller",
+      "time": "2026-02-26T22:47:05.000Z",
+      "url": "https://x.com/alliekmiller/status/2027153475012907268",
+      "id": "17721537343339a8pcetvoc",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "these guys aren't telling you the main thing\n\n\n@cursor_ai\n cloud agents are currently FREE to use",
+      "author": "agrimsingh",
+      "time": "2026-02-26T18:10:03.000Z",
+      "url": "https://x.com/agrimsingh/status/2027083757027815538",
+      "id": "1772153734333u22rvl27x8",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "Spoke to 20 students in the last 2 weeks.\n\n0 are using Cursor.\n\nZero.",
+      "author": "AstasiaMyers",
+      "time": "2026-02-26T22:07:15.000Z",
+      "url": "https://x.com/AstasiaMyers/status/2027143450655891589",
+      "id": "1772153734333lbackdkb30a",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "9500 people have this bookmarked for later",
+      "author": "jacob_posel",
+      "time": "2026-02-26T03:17:02.000Z",
+      "url": "https://x.com/jacob_posel/status/2026859022926610933",
+      "id": "17721537343338w9ku8nnrfo",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "give me a $10k MRR app idea",
+      "author": "orcdev",
+      "time": "2026-02-26T16:00:22.000Z",
+      "url": "https://x.com/orcdev/status/2027051120065974712",
+      "id": "1772153734333cprxqf3c3h",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "This is what I think about everyday and sleep disappointed ",
+      "author": "amanvarshney01",
+      "time": "2026-02-26T19:49:03.000Z",
+      "url": "https://x.com/amanvarshney01/status/2027108670446928203",
+      "id": "1772153734333nviuclfg63f",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "Andreji Karpathy every 2-3 months as software continues to radically reinvent itself.",
+      "author": "Aizkmusic",
+      "time": "2026-02-25T19:06:28.000Z",
+      "url": "https://x.com/Aizkmusic/status/2026735567975653824",
+      "id": "1772153734333miew9q7r77s",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "In case you didn't see it ...",
+      "author": "ryancarson",
+      "time": "2026-02-26T15:44:20.000Z",
+      "url": "https://x.com/ryancarson/status/2027047083190911057",
+      "id": "1772153734333p588y12ectt",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "Do people understand this model can run on your MacBook Pro or Mac Mini?\n\nClaude Opus level intelligence, for FREE\n\nIf it’s not clear not clear:\nA free, open-weight model (24gb) you can download right now and run on your laptop is competing with models that cost $200/month",
+      "author": "JoshKale",
+      "time": "2026-02-25T20:50:02.000Z",
+      "url": "https://x.com/JoshKale/status/2026761627979120815",
+      "id": "17721537343332q5saa76yxj",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "There’s never a slow day in the world of AI & Software",
+      "author": "Rasmic",
+      "time": "2026-02-26T19:14:52.000Z",
+      "url": "https://x.com/Rasmic/status/2027100067111522487",
+      "id": "17721537343331q6nmsqu629",
+      "fetchedAt": 1772153734333
+    },
+    {
+      "text": "Well there goes my weekend plans.\n\nGonna be having fun with this instead",
+      "author": "dreamsofcode_io",
+      "time": "2026-02-26T21:14:44.000Z",
+      "url": "https://x.com/dreamsofcode_io/status/2027130234026266908",
+      "id": "1772153734333hfabeg41prg",
+      "fetchedAt": 1772153734333
+    }
+  ],
+  "topics": [
+    {
+      "name": "Agent Infrastructure",
+      "summary": "Tools and frameworks for running AI agents",
+      "keywords": [
+        "agent",
+        "sandbox",
+        "isolation",
+        "runtime",
+        "infrastructure",
+        "openclaw",
+        "zeroclaw"
+      ],
+      "tweetCount": 8,
+      "importance": 110,
+      "id": "1772153763238",
+      "createdAt": 1772153763238
+    },
+    {
+      "name": "AI Memory/Context",
+      "summary": "AI systems that remember across sessions",
+      "keywords": [
+        "memory",
+        "remember",
+        "context",
+        "sessions",
+        "auto-memory"
+      ],
+      "tweetCount": 2,
+      "importance": 60,
+      "id": "1772153763241",
+      "createdAt": 1772153763241
+    },
+    {
+      "name": "Block AI Layoffs",
+      "summary": "Block added $8B in market cap after announcing AI-driven layoffs",
+      "keywords": [
+        "block",
+        "layoff",
+        "fired",
+        "$8b",
+        "market cap",
+        "employees"
+      ],
+      "tweetCount": 1,
+      "importance": 50,
+      "id": "1772153763242",
+      "createdAt": 1772153763242
+    },
+    {
+      "name": "Local AI Models",
+      "summary": "Running powerful AI models locally",
+      "keywords": [
+        "local",
+        "macbook",
+        "24gb",
+        "open source",
+        "open weight",
+        "free"
+      ],
+      "tweetCount": 3,
+      "importance": 50,
+      "id": "1772153763244",
+      "createdAt": 1772153763244
+    },
+    {
+      "name": "Coding Tools Race",
+      "summary": "Competition in AI-assisted coding tools",
+      "keywords": [
+        "cursor",
+        "opencode",
+        "claude code",
+        "coding",
+        "vibe coding"
+      ],
+      "tweetCount": 3,
+      "importance": 40,
+      "id": "1772153763246",
+      "createdAt": 1772153763246
+    },
+    {
+      "name": "Visual Agent Builders",
+      "summary": "No-code tools for building AI agents",
+      "keywords": [
+        "drag",
+        "drop",
+        "canvas",
+        "visual",
+        "no code",
+        "sim"
+      ],
+      "tweetCount": 1,
+      "importance": 40,
+      "id": "1772153763248",
+      "createdAt": 1772153763248
+    },
+    {
+      "name": "Industry Shifts",
+      "summary": "How AI is changing the software industry",
+      "keywords": [
+        "changing",
+        "changed",
+        "students",
+        "hiring",
+        "interview",
+        "future"
+      ],
+      "tweetCount": 2,
+      "importance": 20,
+      "id": "1772153763249",
+      "createdAt": 1772153763249
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tool Discovery",
+      "description": "Find new tools & frameworks to test",
+      "keywords": [
+        "tool",
+        "framework",
+        "library",
+        "sdk",
+        "cli",
+        "open source",
+        "release"
+      ],
+      "id": "1772153742553",
+      "active": true
+    },
+    {
+      "name": "Cutting Edge Intel",
+      "description": "Track paradigm shifts in AI/software",
+      "keywords": [
+        "changing",
+        "new reality",
+        "first principles",
+        "revolution",
+        "paradigm",
+        "future"
+      ],
+      "id": "1772153742564",
+      "active": true
+    },
+    {
+      "name": "Competitive Awareness",
+      "description": "Know what others are building",
+      "keywords": [
+        "building",
+        "shipped",
+        "launched",
+        "startup",
+        "company",
+        "hiring"
+      ],
+      "id": "1772153742572",
+      "active": true
+    }
+  ],
+  "feedback": [],
+  "edges": []
+}
