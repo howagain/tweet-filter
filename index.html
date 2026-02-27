@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitter Intelligence Dashboard</title>
-  <script src="https://unpkg.com/convex@1.17.4/dist/browser.bundle.js"></script>
   <style>
     * { box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e2e8f0; margin: 0; padding: 20px; line-height: 1.5; }
@@ -12,16 +11,15 @@
     header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #1e293b; }
     header h1 { color: #3b82f6; margin-bottom: 5px; font-size: 24px; }
     header p { color: #64748b; font-size: 14px; }
-    .live-badge { display: inline-block; background: #10b981; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 10px; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    .live-badge { display: inline-block; background: #10b981; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 10px; }
     
     .stats-row { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
-    .stat-card { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 15px 25px; border-radius: 12px; text-align: center; }
+    .stat-card { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 15px 25px; border-radius: 12px; text-align: center; min-width: 100px; }
     .stat-value { font-size: 28px; font-weight: 700; color: #3b82f6; }
     .stat-label { font-size: 11px; color: #64748b; }
     
     .section { margin-bottom: 30px; }
-    .section-title { font-size: 14px; color: #94a3b8; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .section-title { font-size: 14px; color: #94a3b8; margin-bottom: 15px; }
     
     .project-card { display: flex; align-items: center; gap: 12px; padding: 12px; background: #1e293b; border-radius: 10px; margin-bottom: 8px; }
     .project-icon { font-size: 20px; }
@@ -30,10 +28,7 @@
     
     .topic-card { background: #1e293b; border-radius: 16px; margin-bottom: 20px; overflow: hidden; border: 1px solid #334155; }
     .topic-header { padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%); display: flex; align-items: center; gap: 15px; }
-    .importance-badge { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
-    .importance-high { background: linear-gradient(135deg, #10b981, #059669); }
-    .importance-med { background: linear-gradient(135deg, #f59e0b, #d97706); }
-    .importance-low { background: linear-gradient(135deg, #64748b, #475569); }
+    .topic-badge { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
     .topic-info { flex: 1; }
     .topic-name { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
     .topic-summary { font-size: 13px; color: #94a3b8; }
@@ -43,55 +38,72 @@
     .tweet-mini { background: #0f172a; padding: 12px; border-radius: 10px; margin-bottom: 10px; }
     .tweet-author { font-size: 12px; color: #3b82f6; margin-bottom: 4px; }
     .tweet-text { font-size: 13px; color: #cbd5e1; }
-    .tweet-actions { display: flex; gap: 8px; margin-top: 8px; }
-    .tweet-btn { padding: 4px 10px; border-radius: 6px; border: none; font-size: 11px; cursor: pointer; }
-    .btn-good { background: #10b981; color: white; }
-    .btn-bad { background: #ef4444; color: white; }
-    .btn-link { background: #334155; color: #94a3b8; text-decoration: none; }
+    .tweet-link { color: #64748b; font-size: 11px; text-decoration: none; display: inline-block; margin-top: 6px; }
     
     .loading { text-align: center; padding: 40px; color: #64748b; }
     .error { background: #7f1d1d; color: #fecaca; padding: 15px; border-radius: 10px; margin: 20px 0; }
+    #debug { background: #1e293b; padding: 10px; border-radius: 8px; font-size: 11px; color: #94a3b8; margin-top: 20px; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>🧠 Twitter Intelligence Dashboard <span class="live-badge">LIVE</span></h1>
-      <p>Real-time knowledge graph • Powered by Convex</p>
+      <p>Real-time knowledge graph • Convex Backend</p>
     </header>
     
-    <div class="stats-row" id="stats">
-      <div class="stat-card"><div class="stat-value" id="topicCount">-</div><div class="stat-label">Topics</div></div>
+    <div class="stats-row">
       <div class="stat-card"><div class="stat-value" id="tweetCount">-</div><div class="stat-label">Tweets</div></div>
+      <div class="stat-card"><div class="stat-value" id="topicCount">-</div><div class="stat-label">Topics</div></div>
       <div class="stat-card"><div class="stat-value" id="projectCount">-</div><div class="stat-label">Projects</div></div>
     </div>
     
     <div class="section">
       <div class="section-title">📌 Your Projects</div>
-      <div id="projects"><div class="loading">Loading projects...</div></div>
+      <div id="projects"><div class="loading">Loading...</div></div>
     </div>
     
     <div class="section">
-      <div class="section-title">📊 Topic Clusters (ranked by importance)</div>
-      <div id="topics"><div class="loading">Loading topics...</div></div>
+      <div class="section-title">📊 Topic Clusters</div>
+      <div id="topics"><div class="loading">Loading...</div></div>
     </div>
+    
+    <div id="debug"></div>
   </div>
 
-  <script>
+  <script type="module">
     const CONVEX_URL = "https://adorable-boar-892.convex.cloud";
-    const client = new Convex.ConvexHttpClient(CONVEX_URL);
     
-    let tweets = [];
-    let topics = [];
-    let projects = [];
+    // Simple HTTP fetch for Convex queries
+    async function query(name, args = {}) {
+      const [file, fn] = name.split(':');
+      const res = await fetch(`${CONVEX_URL}/api/query`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          path: `${file}:${fn}`,
+          args: args
+        })
+      });
+      const data = await res.json();
+      if (data.status === 'success') return data.value;
+      throw new Error(data.errorMessage || 'Query failed');
+    }
+    
+    let tweets = [], topics = [], projects = [];
     
     async function load() {
+      const debug = document.getElementById('debug');
       try {
+        debug.textContent = 'Loading from Convex...';
+        
         [tweets, topics, projects] = await Promise.all([
-          client.query("tweets:listTweets", { limit: 100 }),
-          client.query("topics:listTopics", {}),
-          client.query("projects:listProjects", {})
+          query('tweets:listTweets', { limit: 100 }),
+          query('topics:listTopics'),
+          query('projects:listProjects')
         ]);
+        
+        debug.textContent = `Loaded: ${tweets.length} tweets, ${topics.length} topics, ${projects.length} projects`;
         
         document.getElementById('tweetCount').textContent = tweets.length;
         document.getElementById('topicCount').textContent = topics.length;
@@ -100,8 +112,8 @@
         renderProjects();
         renderTopics();
       } catch (e) {
-        console.error('Load error:', e);
-        document.getElementById('topics').innerHTML = `<div class="error">Error loading: ${e.message}</div>`;
+        debug.textContent = 'Error: ' + e.message;
+        console.error(e);
       }
     }
     
@@ -114,17 +126,12 @@
             <div class="project-desc">${p.description}</div>
           </div>
         </div>
-      `).join('');
+      `).join('') || '<div class="loading">No projects</div>';
     }
     
     function renderTopics() {
-      const sorted = topics.sort((a, b) => (b.importance || 0) - (a.importance || 0));
-      
-      document.getElementById('topics').innerHTML = sorted.map(topic => {
-        const impClass = (topic.importance || 0) >= 80 ? 'importance-high' : 
-                         (topic.importance || 0) >= 40 ? 'importance-med' : 'importance-low';
-        
-        // Find matching tweets
+      document.getElementById('topics').innerHTML = topics.map(topic => {
+        // Find matching tweets by keywords
         const matching = tweets.filter(t => {
           const text = (t.text || '').toLowerCase();
           return (topic.keywords || []).some(kw => text.includes(kw.toLowerCase()));
@@ -133,10 +140,10 @@
         return `
           <div class="topic-card">
             <div class="topic-header">
-              <div class="importance-badge ${impClass}">${topic.importance || 0}</div>
+              <div class="topic-badge">${matching.length}</div>
               <div class="topic-info">
                 <div class="topic-name">${topic.name}</div>
-                <div class="topic-summary">${topic.summary}</div>
+                <div class="topic-summary">${topic.summary || ''}</div>
                 <div class="topic-meta">
                   <span>📊 ${matching.length} tweets</span>
                   <span>🔗 ${(topic.keywords || []).length} keywords</span>
@@ -146,29 +153,15 @@
             <div class="topic-content">
               ${matching.slice(0, 3).map(t => `
                 <div class="tweet-mini">
-                  <div class="tweet-author">@${t.authorHandle || t.author}</div>
+                  <div class="tweet-author">@${t.authorHandle || t.author || 'unknown'}</div>
                   <div class="tweet-text">${(t.text || '').slice(0, 200)}...</div>
-                  <div class="tweet-actions">
-                    <button class="tweet-btn btn-good" onclick="rate('${t._id}', 'good')">👍</button>
-                    <button class="tweet-btn btn-bad" onclick="rate('${t._id}', 'bad')">👎</button>
-                    <a href="${t.url}" target="_blank" class="tweet-btn btn-link">↗ View</a>
-                  </div>
+                  <a href="${t.url}" target="_blank" class="tweet-link">↗ View on X</a>
                 </div>
-              `).join('')}
+              `).join('') || '<div class="loading">No matching tweets</div>'}
             </div>
           </div>
         `;
-      }).join('');
-    }
-    
-    async function rate(tweetId, rating) {
-      try {
-        await client.mutation("feedback:saveFeedback", { tweetId, rating });
-        event.target.style.opacity = '0.5';
-        event.target.disabled = true;
-      } catch (e) {
-        console.error('Rate error:', e);
-      }
+      }).join('') || '<div class="loading">No topics</div>';
     }
     
     load();
